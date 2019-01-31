@@ -1,0 +1,22 @@
+  <div class="row">
+<%= for spot <- @spots do %>
+
+
+    <div class="col s12 m3">
+      <div class="card small">
+        <div class="card-image">
+          <img src="<%=Sloecator.ImageFile.url spot.filename, spot%>">
+          <span class="card-title"><%=spot.tag%></span>
+        </div>
+        <div class="card-content">
+          <p><%=spot.description%></p>
+        </div>
+        <div class="card-action">
+          <%= link "Show", to: spot_path(@conn, :show, spot), class: "btn btn-default btn-xs" %>
+        </div>
+      </div>
+    </div>
+  
+
+<% end %>
+</div>

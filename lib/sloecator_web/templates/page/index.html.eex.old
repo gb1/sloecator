@@ -1,0 +1,19 @@
+
+<script>
+
+
+  navigator.geolocation.getCurrentPosition(function(position) {
+    console.log(position.coords.latitude, position.coords.longitude);
+    location.href = "/spots/?lat=" + position.coords.latitude + "&lng=" + position.coords.longitude
+  });
+
+navigator.geolocation.getCurrentPosition(
+  function()
+    {
+      //alert("success")
+    },
+  function(err){alert(err)}
+);
+
+</script>
+<h1></h1>

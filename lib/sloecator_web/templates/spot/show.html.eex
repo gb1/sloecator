@@ -1,0 +1,23 @@
+<h2>Show Spot</h2>
+
+<ul>
+
+  <li>
+    <strong>Tag:</strong>
+    <%= @spot.tag %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @spot.description %>
+  </li>
+
+  <li>
+    <strong>Point:</strong>
+    <%= @spot.point %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: spot_path(@conn, :edit, @spot) %></span>
+<span><%= link "Back", to: spot_path(@conn, :index) %></span>
